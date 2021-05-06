@@ -2,45 +2,63 @@ import javax.swing.JOptionPane;
 
 public class prueba {
     public static void main(String[] args) {
-
+        
+        //MENUS DE BIENVENIDA
         JOptionPane.showMessageDialog(null,        " ╔═════════════════════════╗\n"                                                
 	                                            + " ║           BIENVENIDOS!            ║\n"       
 	                                            + " ╚═════════════════════════╝\n");
 
-		JOptionPane.showMessageDialog(null,"                                                        █  █▀█ █▀█ █▀▀ █▀▀ █ █ █▄ █ ▀█▀ ▄▀█ █▀▄ █▀█ █▀  █ ");
-		JOptionPane.showMessageDialog(null,"                                                        █  █▀▀ █▀▄ ██▄ █▄█ █▄█ █ ▀█  █  █▀█ █▄▀ █▄█ ▄█  █ ");
-		JOptionPane.showMessageDialog(null,"                                                        █                                               █ ");
-		JOptionPane.showMessageDialog(null,"                                                        █            █▀▄▀█ █ █ █▀ █ █▀▀ ▄▀█ █           █ ");
-		JOptionPane.showMessageDialog(null,"                                                        █            █   █ █▄█ ▄█ █ █▄▄ █▀█ █▄▄         █ \n");
+		JOptionPane.showMessageDialog(null," ╔══════════════════════════════════════════════════╗ \n "
++"║                             PREGUNTADOS MUSICAL!                       ║ \n "  
++"╚══════════════════════════════════════════════════╝");
 		
-
-		JOptionPane.showMessageDialog(null,"                                                                BIENVENIDO A PREGUNTADOS MUSICAL! \n\n");
-        JOptionPane.showMessageDialog(null,"Para continuar con el programa tienes que responder una pregunta de cultura general basica!, si no la respondes correctamente no te permitiremos el ingreso a nuestro\npreguntados. VAMOS!!! \n");
+        //MENSAJE DE INFORMACION DE LAS REGLAS
+        JOptionPane.showMessageDialog(null,"Para continuar con el programa tienes que responder una pregunta de cultura general basica!,\n"
+        + "si no la respondes correctamente no te permitiremos el ingreso a nuestro preguntados. VAMOS!!! \n");
         
-        String respuesta1;
-
-        respuesta1 = JOptionPane.showInputDialog("1 ¿Cuáles son los cinco tipos de sabores primarios?\n"
-                                + "a) dulce, amargo, ácido, salado y umami*\n"
-                                + "b) dulce, picante, salado, amargo\n"
-                                + "c) fuerte, suave, dulce, salado").toUpperCase();
-
-                switch (respuesta1){
-                    case "A" -> JOptionPane.showMessageDialog(null,"Correcto");
-                
-                    case "B" -> JOptionPane.showMessageDialog(null,"Incorrecto por favor vuelve a intentarlo");
-                        
-                    case "C" -> JOptionPane.showMessageDialog(null,"incorrecto");
+        //DEFINIMOS VARIBLES
+        int respuesta1=0;
+        int selec=0;
         
-                    default -> JOptionPane.showMessageDialog(null,"salir");
-        }
+        //PRIMERA PREGUNTA
+        do{
+            do{
+                respuesta1=Integer.parseInt(JOptionPane.showInputDialog("* ¿Cuáles son los cinco tipos de sabores primarios?\n"
+                                                                    + "1) dulce, amargo, ácido, salado y umami*\n"
+                                                                    + "2) dulce, picante, salado, amargo\n"
+                                                                    + "3) fuerte, suave, dulce, salado"));
                 
                 
+            //CONDICION PARA SACAR AL USUARIO SE SELECCIONA UN NUMERO DISTINTO A 1,2 O 3.
+            if (respuesta1>=1 && respuesta1<=3) {
+                    selec=1;
+            }else{
+                JOptionPane.showMessageDialog(null, "No es una opcion.Gracias por jugar");
+                    System.exit(0);
+                }
+
+            }while(selec==0);
                 
-        //System.out.println("                                                            1. Buscar canción");
-		//System.out.println("                                                            2. Reproducir canción");
-		//System.out.println("                                                            3. Mostrar Letra");
-		//System.out.println("                                                            4. Detener Canción");
-		//System.out.println("                                                            5. Imprimir lista de Canciones");
-		//System.out.println("                                                            6. Salir\n");
+                if (respuesta1==1) {
+                    JOptionPane.showMessageDialog(null, "CORRECTO");
+                    JOptionPane.showInputDialog("1.Buscar canción\n"
+                                                +"2. Reproducir canción\n"
+                                                +"3. Mostrar Letra\n"
+                                                +"4. Detener cancion\n"
+                                                +"5. Imprimir Lista de canciones\n"
+                                                +"6. Salir\n");
+
+            }else if (respuesta1==2) {
+                JOptionPane.showMessageDialog(null, "INCORRECTO.");
+                    System.exit(0);
+                    selec=2;
+                }else if (respuesta1==3) {
+                    JOptionPane.showMessageDialog(null, "INCORRECTO.");
+                    System.exit(0);
+                    selec=2;
+                    }
+        }while(selec!=2);
     }
 }
+            
+
