@@ -6,13 +6,16 @@ public class programafinal {
         Scanner scanner = new Scanner(System.in);
 
         //MENUS DE BIENVENIDA
-        System.out.println( "╔═════════════════════════╗");                                                
-	    System.out.println( "║       BIENVENIDOS!      ║");       
-	    System.out.println( "╚═════════════════════════╝");
+        System.out.println( "                                       ╔═════════════════════════╗                          ");                                                
+	    System.out.println( "                                       ║       BIENVENIDOS!      ║                          ");       
+	    System.out.println( "                                       ╚═════════════════════════╝\n                        ");
 
-		System.out.println(" ╔══════════════════════════════════════════════════╗");
-        System.out.println(" ║             PREGUNTADOS MUSICAL!                 ║");  
-        System.out.println(" ╚══════════════════════════════════════════════════╝");
+		System.out.println("            ████████  █████   ██████    █████    ██████   █████   █████    ███   ██   █████  ");
+        System.out.println("               ██    ██   ██  ██   ██  ██   ██  ██       ██   ██  ██   ██  ████  ██  ██   ██ ");
+        System.out.println("               ██    ███████  ██   ██  ██   ██   █████   ██       ███████  ██ ██ ██  ██      ");
+        System.out.println("               ██    ██   ██  ██   ██  ██   ██       ██  ██   ██  ██   ██  ██  ████  ██   ██ ");
+        System.out.println("               ██    ██   ██  ██████    █████   ██████    █████   ██   ██  ██   ███   █████\n");
+        
 		
         //MENSAJE DE INFORMACION DE LAS REGLAS
         System.out.println("Para continuar con el programa tienes que responder cual canción es la que suena. VAMOS!!!");
@@ -44,7 +47,7 @@ public class programafinal {
 
         //HACEMOS QUE SUENA LA CANCION ALEATORIAMENTE
         
-				audio.seleccionarCancion(info_canciones[01][ConsoleData.RUTA_CANCION]);
+				audio.seleccionarCancion(info_canciones[1][ConsoleData.RUTA_CANCION]);
 				audio.reproducir();
 				
 
