@@ -1,14 +1,69 @@
 import java.util.Scanner;
 
 public class programafinal {
+
+    public static StringBuilder obtenerLetraCancion(int inicio,int fin, String[]data)
+	{
+		StringBuilder str = new StringBuilder();
+
+		for(int i = inicio; i<=fin; i++)
+		{
+			str.append(data[i]+"\n");
+		}
+
+		return str;
+	}
+	public static String convertirUnicode(String letra,String cadena){
+		
+		StringBuilder str = new StringBuilder(cadena);
+		int indice = -1;
+		char caracter = 0;
+		indice = str.lastIndexOf(letra);
+		
+		if(indice>=0 )
+		{
+			switch(letra){
+				case "á": caracter = '\u00E1';
+					      break;
+				case "é": caracter = '\u00E9';
+					      break;
+				case "í": caracter = '\u00ED';
+					      break;
+		        case "ó": caracter = '\u00F3';
+					      break;
+			    case "ú": caracter = '\u00FA';
+					      break;
+				case "ñ": caracter = '\u00F1';
+					      break;
+			}
+			// System.out.println("\\u" + Integer.toHexString('÷' | 0x10000).substring(1));
+			str.replace(indice,indice+2,""+caracter);
+		}
+
+		return str.toString();
+	}
+
+	public static void imprimir(String cadena)
+	{
+		String str; 
+		str = convertirUnicode("á",cadena);
+		str = convertirUnicode("é",str);
+		str = convertirUnicode("í",str);
+		str = convertirUnicode("ó",str);
+		str = convertirUnicode("ú",str);
+		str = convertirUnicode("ñ",str);
+
+		System.out.println(str);
+	}
+	
     public static void main(String[] args) {
         
         Scanner scanner = new Scanner(System.in);
 
         //MENUS DE BIENVENIDA
-        System.out.println( "                                       ╔═════════════════════════╗                          ");                                                
-	    System.out.println( "                                       ║       BIENVENIDOS!      ║                          ");       
-	    System.out.println( "                                       ╚═════════════════════════╝\n                        ");
+        System.out.println( "                                    ╔═════════════════════════╗                          ");                                                
+	    System.out.println( "                                    ║       BIENVENIDOS!      ║                          ");       
+	    System.out.println( "                                    ╚═════════════════════════╝\n                        ");
 
 		System.out.println("            ████████  █████   ██████    █████    ██████   █████   █████    ███   ██   █████  ");
         System.out.println("               ██    ██   ██  ██   ██  ██   ██  ██       ██   ██  ██   ██  ████  ██  ██   ██ ");
@@ -26,7 +81,7 @@ public class programafinal {
 		int indice_cancion = 0;
 		int inicio_letra = 0, fin_letra = 0;
         int respuesta1=0;
-        int selec=0;
+        
 		//GUARDAMOS LA INFORMACION DE LAS CANCIONES EN UNA LISTA
 		String [] canciones;
 
@@ -78,15 +133,64 @@ public class programafinal {
                             System.out.println("23). Vivo_por_ella");
                             centinela = ConsoleInput.getInt();
 
-        if (centinela == 1)
-            System.out.println("Correcto");
-            audio.detener();
+        do{
+			if (centinela >=1 && centinela<=23){
+				System.out.println("correcto");
+				System.out.println();
+					imprimir("Ingrese una opción así:");
+					imprimir("3. Mostrar Letra");
+					imprimir("4. Detener Canción");
+					imprimir("5. Imprimir lista de Canciones");
+					imprimir("6. Salir");
+					respuesta1 = ConsoleInput.getInt();
+			}
+			else
+				System.out.println("Incorrecto");
+				System.exit(1);
+
+				if(respuesta1 == 3)
+				{
+					//TODO: Ojo, falta validar el valor ingresado
+					//TODO: Falta darle formato amigable de lectura al usuario 
+					imprimir("Ingrese indice de la cancion, entre 0 y "+(info_canciones.length-1));
+					indice_cancion = ConsoleInput.getInt();
+
+					inicio_letra = ConsoleInput.stringToInt(info_canciones[indice_cancion][ConsoleData.INICIO_CANCION]);
+					fin_letra = ConsoleInput.stringToInt(info_canciones[indice_cancion][ConsoleData.FIN_CANCION]);
+					
+					letra_cancion = obtenerLetraCancion(inicio_letra,fin_letra,canciones);
+
+					imprimir(letra_cancion.toString());
+				}
+
+				if(respuesta1 == 4)
+				{
+					audio.detener();
+				}
+
+				if(respuesta1 == 5)
+				{
+					imprimir("Ingrese indice de la cancion, entre 0 y "+(info_canciones.length-1));
+					indice_cancion = ConsoleInput.getInt();
+
+					inicio_letra = ConsoleInput.stringToInt(info_canciones[indice_cancion][ConsoleData.INICIO_CANCION]);
+					fin_letra = ConsoleInput.stringToInt(info_canciones[indice_cancion][ConsoleData.FIN_CANCION]);
+
+					System.out.println();
+					imprimir("Inicio letra "+inicio_letra);
+					imprimir("Fin letra "+fin_letra);
+					imprimir("Nombre "+info_canciones[indice_cancion][ConsoleData.NOMBRE_CANCION]);
+					imprimir("Autor "+info_canciones[indice_cancion][ConsoleData.AUTOR_CANCION]);
+					imprimir("Archivo "+info_canciones[indice_cancion][ConsoleData.RUTA_CANCION]);
+
+					imprimir("Primera estrofa: "+canciones[inicio_letra]);
+					imprimir("Última estrofa: "+canciones[fin_letra]);
+				}
+
+		}while(respuesta1!=6);				
+	}
+}
     
 
-        //PRIMERA PREGUNTA
-        
-    }
-    
-}
             
 
