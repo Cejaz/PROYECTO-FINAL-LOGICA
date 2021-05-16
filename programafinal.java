@@ -86,27 +86,27 @@ public static void main(String[] args) {
 		String seguir;
 		Scanner teclado = new Scanner(System.in);
 
-    	System.out.println("\n                                                                   ██████╗  ██╗ ███████╗ ███╗  ██╗ ██╗   ██╗ ███████╗ ███╗  ██╗ ██╗ ██████╗   █████╗   ██████╗         ");
-		System.out.println("                                                                   ██╔══██╗ ██║ ██╔════╝ ████╗ ██║ ██║   ██║ ██╔════╝ ████╗ ██║ ██║ ██╔══██╗ ██╔══██╗ ██╔════╝             ");
-		System.out.println("                                                                   ██████╦╝ ██║ █████╗   ██╔██╗██║ ╚██╗ ██╔╝ █████╗   ██╔██╗██║ ██║ ██║  ██║ ██║  ██║ ╚█████╗                   ");
-		System.out.println("                                                                   ██╔══██╗ ██║ ██╔══╝   ██║╚████║  ╚████╔╝  ██╔══╝   ██║╚████║ ██║ ██║  ██║ ██║  ██║  ╚═══██╗              ");
-		System.out.println("                                                                   ██████╦╝ ██║ ███████╗ ██║ ╚███║   ╚██╔╝   ███████╗ ██║ ╚███║ ██║ ██████╔╝ ╚█████╔╝ ██████╔╝                  ");
-		System.out.println("                                                                   ╚═════╝  ╚═╝ ╚══════╝ ╚═╝  ╚══╝    ╚═╝    ╚══════╝ ╚═╝  ╚══╝ ╚═╝ ╚═════╝   ╚════╝  ╚═════╝                   \n\n");
+    	System.out.println("\n                                                         ██████╗  ██╗ ███████╗ ███╗  ██╗ ██╗   ██╗ ███████╗ ███╗  ██╗ ██╗ ██████╗   █████╗   ██████╗         ");
+		System.out.println("                                                         ██╔══██╗ ██║ ██╔════╝ ████╗ ██║ ██║   ██║ ██╔════╝ ████╗ ██║ ██║ ██╔══██╗ ██╔══██╗ ██╔════╝             ");
+		System.out.println("                                                         ██████╦╝ ██║ █████╗   ██╔██╗██║ ╚██╗ ██╔╝ █████╗   ██╔██╗██║ ██║ ██║  ██║ ██║  ██║ ╚█████╗                   ");
+		System.out.println("                                                         ██╔══██╗ ██║ ██╔══╝   ██║╚████║  ╚████╔╝  ██╔══╝   ██║╚████║ ██║ ██║  ██║ ██║  ██║  ╚═══██╗              ");
+		System.out.println("                                                         ██████╦╝ ██║ ███████╗ ██║ ╚███║   ╚██╔╝   ███████╗ ██║ ╚███║ ██║ ██████╔╝ ╚█████╔╝ ██████╔╝                  ");
+		System.out.println("                                                         ╚═════╝  ╚═╝ ╚══════╝ ╚═╝  ╚══╝    ╚═╝    ╚══════╝ ╚═╝  ╚══╝ ╚═╝ ╚═════╝   ╚════╝  ╚═════╝                   \n\n");
 
-		System.out.println("                                                                                                         █████╗");
-		System.out.println("                                                                                                        ██╔══██╗");
-		System.out.println("                                                                                                        ███████║");
-		System.out.println("                                                                                                        ██╔══██║");
-		System.out.println("                                                                                                        ██║  ██║");
-		System.out.println("                                                                                                        ╚═╝  ╚═╝");
+		System.out.println("                                                                                                  █████╗");
+		System.out.println("                                                                                                 ██╔══██╗");
+		System.out.println("                                                                                                 ███████║");
+		System.out.println("                                                                                                 ██╔══██║");
+		System.out.println("                                                                                                 ██║  ██║");
+		System.out.println("                                                                                                 ╚═╝  ╚═╝");
 
 
-		System.out.println("\n                                                                         ██████╗  ██████╗  ███████╗  ██████╗  ██╗   ██╗ ███╗  ██╗ ██╗ ███████╗ ██╗   ██╗");
-        System.out.println("                                                                         ██╔══██╗ ██╔══██╗ ██╔════╝ ██╔════╝  ██║   ██║ ████╗ ██║ ██║ ██╔════╝ ╚██╗ ██╔╝              ");
-        System.out.println("                                                                         ██████╔╝ ██████╔╝ █████╗   ██║  ██╗  ██║   ██║ ██╔██╗██║ ██║ █████╗    ╚████╔╝                ");
-        System.out.println("                                                                         ██╔═══╝  ██╔══██╗ ██╔══╝   ██║  ╚██╗ ██║   ██║ ██║╚████║ ██║ ██╔══╝     ╚██╔╝              ");
-        System.out.println("                                                                         ██║      ██║  ██║ ███████╗ ╚██████╔╝ ╚██████╔╝ ██║ ╚███║ ██║ ██║         ██║              ");
-        System.out.println("                                                                         ╚═╝      ╚═╝  ╚═╝ ╚══════╝  ╚═════╝   ╚═════╝  ╚═╝  ╚══╝ ╚═╝ ╚═╝         ╚═╝\n"); 
+		System.out.println("\n                                                              ██████╗  ██████╗  ███████╗  ██████╗  ██╗   ██╗ ███╗  ██╗ ██╗ ███████╗ ██╗   ██╗");
+        System.out.println("                                                              ██╔══██╗ ██╔══██╗ ██╔════╝ ██╔════╝  ██║   ██║ ████╗ ██║ ██║ ██╔════╝ ╚██╗ ██╔╝              ");
+        System.out.println("                                                              ██████╔╝ ██████╔╝ █████╗   ██║  ██╗  ██║   ██║ ██╔██╗██║ ██║ █████╗    ╚████╔╝                ");
+        System.out.println("                                                              ██╔═══╝  ██╔══██╗ ██╔══╝   ██║  ╚██╗ ██║   ██║ ██║╚████║ ██║ ██╔══╝     ╚██╔╝              ");
+        System.out.println("                                                              ██║      ██║  ██║ ███████╗ ╚██████╔╝ ╚██████╔╝ ██║ ╚███║ ██║ ██║         ██║              ");
+        System.out.println("                                                              ╚═╝      ╚═╝  ╚═╝ ╚══════╝  ╚═════╝   ╚═════╝  ╚═╝  ╚══╝ ╚═╝ ╚═╝         ╚═╝\n"); 
 
 		System.out.println("PARA CONTINUAR CON EL PROGRAMA TIENES QUE RESPONDER CUAL CANCIÓN ES LA QUE SUENA. VAMOS!!!\n");
 		System.out.println("Presiona enter para continuar con el programa...");
@@ -129,24 +129,29 @@ public static void main(String[] args) {
 		audio.seleccionarCancion(info_canciones[RandomHelper.random(0,info_canciones.length-1)][ConsoleData.RUTA_CANCION]);
 		audio.reproducir();
 
-		File directorio = new File("./canciones");
-		String[] lista = directorio.list();
+		File carpeta = new File("./canciones");
+		String[] lista = carpeta.list();
 
 		for(int i=0;i<lista.length;i++)
 		{
 			System.out.println("Canciones # "+i+ " : "+lista[i]);
 		}
 		respuesta = ConsoleInput.getInt();
-		
+		audio.detener();
 
-		
 do{
 	System.out.println();
 	menu();
 	centinela = ConsoleInput.getInt();
 	if(centinela == 1)
 	{
-		//imprimir listas de canciones
+		File carpeta1 = new File("./canciones");
+		String[] lista1 = carpeta1.list();
+
+		for(int i=0;i<lista1.length;i++)
+		{
+			System.out.println("Canciones # "+i+ " : "+lista1[i]);
+		}
 	}
 	if(centinela == 2)
 		{
