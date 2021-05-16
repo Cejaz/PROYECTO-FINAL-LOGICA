@@ -2,11 +2,8 @@ public class AsciiEjemplo{
 
 	public static void main(String[] args) {
 
-	// System.out.print("\\");
+		//System.out.println("\"");
 
-        /*TODO: Terminar Terminar de personalizar cada interfaz, usando los siguientes sitios:
-		- http://www.patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20
-		- https://www.asciiart.eu*/
 		System.out.println("|                              _     _                |");
 		System.out.println("|                             ( \\---/ )                |");
 		System.out.println("|                              ) . . (                |");
