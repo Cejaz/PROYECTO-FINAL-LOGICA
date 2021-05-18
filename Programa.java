@@ -87,7 +87,7 @@ public static void menu(){
 		imprimir("	                                 |                            4. Detener Canción				             |");
 		imprimir("	                                 |                            5. Mostrar datos de canciones		                     |");
 		imprimir("	                                 |                            6. Salir					                     |");
-	System.out.println("	                                 |___________________________________________________________________________________________|");
+	System.out.println("	     .                            |___________________________________________________________________________________________|");
 		System.out.print("					  Seleccione una opcion: ");
 	}
 	
@@ -119,6 +119,7 @@ public static void main(String[] args) {
         System.out.println("                                                    ╚═╝      ╚═╝  ╚═╝ ╚══════╝  ╚═════╝   ╚═════╝  ╚═╝  ╚══╝ ╚═╝ ╚═╝         ╚═╝\n"); 
 
 		System.out.println("PARA CONTINUAR CON EL PROGRAMA TIENES QUE RESPONDER CUAL CANCIÓN ES LA QUE SUENA. VAMOS!!!\n");
+
 		System.out.println("Presiona enter para continuar con el programa...");
 		seguir = teclado.nextLine();		
 
@@ -132,6 +133,7 @@ public static void main(String[] args) {
 		String [] canciones;
 		String [][] info_canciones;
 		StringBuilder letra_cancion;
+
 		canciones = ConsoleFile.readBigFile("recursos/letras.csv");
 		info_canciones = ConsoleData.dataList(canciones);
 
@@ -149,6 +151,8 @@ public static void main(String[] args) {
 		respuesta = ConsoleInput.getInt();
 		audio.detener();
 
+											//FALTA CONTROLAR LA CANCION QUE SUENA CON LA RESPUESTA DEL USUARIO
+
 do{
 	System.out.println();
 	menu();
@@ -164,12 +168,17 @@ do{
 		}
 	}
 	if(centinela == 2)
-		{
-		//TODO: Controlar que el archivo de la cancion exista
+		{	
 		imprimir("Ingrese indice de la cancion, entre 0 y "+(info_canciones.length-1));
 		indice_cancion = ConsoleInput.getInt();
 		audio.seleccionarCancion(info_canciones[indice_cancion][ConsoleData.RUTA_CANCION]);
 		audio.reproducir();
+		
+		//Aca se controla que el archivo exista.
+		File archivo = new File("./canciones");
+			if (!archivo.exists()) {
+    			System.out.println("OJO: ¡No existe el archivo");
+			 	}
 		}
 				
 				
