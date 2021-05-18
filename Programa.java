@@ -93,6 +93,8 @@ public static void menu(){
 	
 public static void main(String[] args) {
 
+	try {
+
 		String seguir;
 		Scanner teclado = new Scanner(System.in);
 
@@ -161,10 +163,9 @@ do{
 	{
 		File carpeta1 = new File("./canciones");
 		String[] lista1 = carpeta1.list();
-
 		for(int i=0;i<lista1.length;i++)
 		{
-			System.out.println("Canciones # "+i+ " : "+lista1[i]);
+			System.out.println("Canción # "+i+ " : "+lista1[i]);
 		}
 	}
 	if(centinela == 2)
@@ -173,7 +174,7 @@ do{
 		indice_cancion = ConsoleInput.getInt();
 		audio.seleccionarCancion(info_canciones[indice_cancion][ConsoleData.RUTA_CANCION]);
 		audio.reproducir();
-		
+
 		//Aca se controla que el archivo exista.
 		File archivo = new File("./canciones");
 			if (!archivo.exists()) {
@@ -220,4 +221,9 @@ do{
 			
 	}while(centinela!=6);				
 	}
+ 	catch (Exception e) {
+	System.out.println(e);
+	}
 }
+}
+
