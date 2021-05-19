@@ -6,7 +6,11 @@ Lo hicimos con la tematica de preguntados, al principio sonara una cancion la cu
 #### Sebastian Restrepo Jaramillo
 #### Mateo Tejada Orozco
 
-# Blog de ayuda
+# BLOG DE AYUDA
 En este blog nos ayudamos y nos orientamos de cada una de las dudas que teniamos sobre el programa.
 
 https://es.stackoverflow.com/
+
+# VIDEO EXPLICACION.
+
+https://youtu.be/N4DRRO4hbSo
