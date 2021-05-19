@@ -171,10 +171,10 @@ public static void menu(){
 
 			//Opcion 1
 			if(centinela == 1)
-			for(int i=0;i<info_canciones.length;i++)
-			{
-			System.out.println("Cancion # "+i+ " : "+info_canciones[i][ConsoleData.NOMBRE_CANCION]);
-			}
+				for(int i=0;i<info_canciones.length;i++)
+				{
+					System.out.println("Cancion # "+i+ " : "+info_canciones[i][ConsoleData.NOMBRE_CANCION]);
+				}
 			
 			//Opcion 2
 			if(centinela == 2)
