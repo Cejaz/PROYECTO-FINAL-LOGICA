@@ -209,14 +209,9 @@ public static void menu(){
 				fin_letra = ConsoleInput.stringToInt(info_canciones[indice_cancion][ConsoleData.FIN_CANCION]);
 
 				System.out.println();
-				imprimir("Inicio letra: "+inicio_letra);
-				imprimir("Fin letra: "+fin_letra);
 				imprimir("Nombre: "+info_canciones[indice_cancion][ConsoleData.NOMBRE_CANCION]);
 				imprimir("Autor: "+info_canciones[indice_cancion][ConsoleData.AUTOR_CANCION]);
 				imprimir("Archivo: "+info_canciones[indice_cancion][ConsoleData.RUTA_CANCION]);
-
-				imprimir("Primera estrofa: "+canciones[inicio_letra]);
-				imprimir("Última estrofa: "+canciones[fin_letra]);
 			}
 			//Opcion 6	
 		}while(centinela!=6);				
