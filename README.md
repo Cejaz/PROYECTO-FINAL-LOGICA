@@ -7,4 +7,6 @@ Lo hicimos con la tematica de preguntados, al principio sonara una cancion la cu
 #### Mateo Tejada Orozco
 
 # Blog de ayuda
+En este blog nos ayudamos y nos orientamos de cada una de las dudas que teniamos sobre el programa.
+
 https://es.stackoverflow.com/
