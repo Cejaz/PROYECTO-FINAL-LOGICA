@@ -1,6 +1,10 @@
 # PROYECTO-FINAL-LOGICA
 Proyecto Final segundo semestre.
 Lo hicimos con la tematica de preguntados, al principio sonara una cancion la cual el usuario tendra que decir cual es, si es correcto se le da acceso al usuario a un menu en el que puede realizar otras opciones, si no es correcta la seleccion del usuario, se le saca del programa.
+
 # INTEGRANTES
 #### Sebastian Restrepo Jaramillo
 #### Mateo Tejada Orozco
+
+# Blog de ayuda
+https://es.stackoverflow.com/
