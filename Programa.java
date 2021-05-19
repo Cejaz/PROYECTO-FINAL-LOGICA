@@ -153,12 +153,12 @@ public static void menu(){
 		//Creamos la condicion de que si la seleccion_actual del usuario es igual a la respuesta le decimos al usuario si es correcto o no su respuesta.
 		if(seleccion_actual == respuesta)
 		{
-			System.out.println("Correcto");
-			System.out.println("Su cancion es : "+ seleccion_actual );
+			System.out.println("\nCorrecto\n");
+			System.out.println("Su cancion es : "+info_canciones[seleccion_actual][ConsoleData.NOMBRE_CANCION]);
 		}
 		else
 		{
-			System.out.println("Canción incorrecta, gracias por jugar. Por favor dar enter para salir del programa");
+			System.out.println("\nCanción incorrecta, gracias por jugar. Por favor dar enter para salir del programa");
 			ConsoleInput.getString();
 			System.exit(0);
 		}
