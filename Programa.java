@@ -154,7 +154,7 @@ public static void menu(){
 		if(seleccion_actual == respuesta)
 		{
 			System.out.println("\nCorrecto\n");
-			System.out.println("Su cancion es : "+info_canciones[seleccion_actual][ConsoleData.NOMBRE_CANCION]);
+			System.out.println("Su cancion es : "+info_canciones[seleccion_actual][ConsoleData.NOMBRE_CANCION] + " Del autor : "+ info_canciones[seleccion_actual][ConsoleData.AUTOR_CANCION]);
 		}
 		else
 		{
@@ -170,10 +170,12 @@ public static void menu(){
 			centinela = ConsoleInput.getInt();
 
 			//Opcion 1
+			if(centinela == 1)
 			for(int i=0;i<info_canciones.length;i++)
-		{
-			System.out.println("Canciones # "+i+ " : "+info_canciones[i][ConsoleData.NOMBRE_CANCION]);
-		}
+			{
+			System.out.println("Cancion # "+i+ " : "+info_canciones[i][ConsoleData.NOMBRE_CANCION]);
+			}
+			
 			//Opcion 2
 			if(centinela == 2)
 			{	
